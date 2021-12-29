@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Abis page</title>
+</head>
+
+<body onload="onLoad()">
+
+    <header>
+        <div class="main-header">
+            <h1>Abis page</h1>
+        </div>
+        <div class="menu">
+            <button class="button dropdown-menu dMenu">Menu</button>
+            <ul>
+                <li><a>log in</a></li>
+                <li><a>sign in</a></li>
+                <li><a>log out</a></li>
+            </ul>
+        </div>
+
+        <div class="menu">
+            <button class="button dropdown-menu dMenu">Home</button>
+        </div>
+
+    </header>
+    <main>
+        <div class="main">
+            <select id="gameCh">
+                <option>Bedwars</option>
+                <option>UHC</option>
+            </select>
+            <input type="text" id="nameSearch" placeholder="name">
+            <button onclick="NameMc()" class="button">NameMc</button>
+            <br>
+            <div id="hypixelStats" class="hypixelStats"></div>
+        </div>
+    </main>
+    <footer>
+        <a href="https://www.youtube.com/channel/UCLW90lOshMMA-G6DvcoNWeg">Made by Peety</a>
+    </footer>
+
+</body>
+
+</html>
