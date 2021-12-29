@@ -16,7 +16,7 @@ async function NameMc() {
                 let bedwarsBeds = hypixelData.hypixel.player.stats.Bedwars.beds_broken_bedwars;
                 let bedwarsCoins = hypixelData.hypixel.player.stats.Bedwars.coins;
 
-                document.getElementById("hypixelStats").innerHTML = "Stats for " + "<b>"+name+"</b>" + "<br>" +"Bedwars level: " + bedwarsLevel + "<br>" + "Bedwars final kills: " + bedwarsFinals + "<br>" + "Bedwars beds broken: " + bedwarsBeds + "<br>" + "Bedwars coins: " + bedwarsCoins;
+                document.getElementById("hypixelStats").innerHTML = "Stats for " + "<b>" + name + "</b>" + "<br>" + "Bedwars level: " + bedwarsLevel + "<br>" + "Bedwars final kills: " + bedwarsFinals + "<br>" + "Bedwars beds broken: " + bedwarsBeds + "<br>" + "Bedwars coins: " + bedwarsCoins;
             } catch (e) {
                 console.log(e)
             }
@@ -31,6 +31,13 @@ async function NameMc() {
             } catch (e) {
                 console.log(e)
             }
+        } else if (gameCh == "Skywars") {
+            let SkywarsWinsSolo = hypixelData.hypixel.player.achievements.skywars_wins_solo
+            let SkywarsWinsTeam = hypixelData.hypixel.player.achievements.skywars_wins_team;
+            let SkywarsKillsSolo = hypixelData.hypixel.player.achievements.skywars_kills_solo;
+            let SkywarsKillsTeam = hypixelData.hypixel.player.achievements.skywars_kills_team;
+
+            document.getElementById("hypixelStats").innerHTML = "Stats for " + "<b>" + name + "</b>" + "<br>" + "Skywars wins solo: " + SkywarsWinsSolo + "<br>" + "Skywars wins team: " + SkywarsWinsTeam + "<br>" + "Skywars kills solo: " + SkywarsKillsSolo + "<br>" + "Skywars kills team: " + SkywarsKillsTeam;
         }
         return
     } else {
@@ -43,7 +50,7 @@ async function NameMc() {
         })
         hypixelData = await response.json()
 
-        
+
         nameSearch = name;
 
         if (response.status == "409") {
@@ -62,7 +69,7 @@ async function NameMc() {
                 let bedwarsBeds = hypixelData.hypixel.player.stats.Bedwars.beds_broken_bedwars;
                 let bedwarsCoins = hypixelData.hypixel.player.stats.Bedwars.coins;
 
-                document.getElementById("hypixelStats").innerHTML = "Stats for " + "<b>"+name+"</b>" + "<br>" +"Bedwars level: " + bedwarsLevel + "<br>" + "Bedwars final kills: " + bedwarsFinals + "<br>" + "Bedwars beds broken: " + bedwarsBeds + "<br>" + "Bedwars coins: " + bedwarsCoins;
+                document.getElementById("hypixelStats").innerHTML = "Stats for " + "<b>" + name + "</b>" + "<br>" + "Bedwars level: " + bedwarsLevel + "<br>" + "Bedwars final kills: " + bedwarsFinals + "<br>" + "Bedwars beds broken: " + bedwarsBeds + "<br>" + "Bedwars coins: " + bedwarsCoins;
             } catch (e) {
                 console.log(e)
             }
@@ -73,10 +80,17 @@ async function NameMc() {
                 let UHCkills = hypixelData.hypixel.player.stats.UHC.kills;
                 let UHCcoins = hypixelData.hypixel.player.stats.UHC.coins
 
-                document.getElementById("hypixelStats").innerHTML = "Stats for "+ "<b>"+name+"</b>" + "<br>"+"UHC wins: " + UHCwins + "<br>" + "UHC kills: " + UHCkills + "<br>" + "UHC coins: " + UHCcoins;
+                document.getElementById("hypixelStats").innerHTML = "Stats for " + "<b>" + name + "</b>" + "<br>" + "UHC wins: " + UHCwins + "<br>" + "UHC kills: " + UHCkills + "<br>" + "UHC coins: " + UHCcoins;
             } catch (e) {
                 console.log(e)
             }
+        } else if (gameCh == "Skywars") {
+            let SkywarsWinsSolo = hypixelData.hypixel.player.achievements.skywars_wins_solo;
+            let SkywarsWinsTeam = hypixelData.hypixel.player.achievements.skywars_wins_team;
+            let SkywarsKillsSolo = hypixelData.hypixel.player.achievements.skywars_kils_solo;
+            let SkywarsKillsTeam = hypixelData.hypixel.player.achievements.skywars_kils_team;
+
+            document.getElementById("hypixelStats").innerHTML = "Stats for " + "<b>" + name + "</b>" + "<br>" + "Skywars wins solo: " + SkywarsWinsSolo + "<br>" + "Skywars wins team: " + SkywarsWinsTeam + "<br>" + "Skywars kills solo: " + SkywarsKillsSolo + "<br>" + "Skywars kills team: " + SkywarsKillsTeam;
         }
     }
 
